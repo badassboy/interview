@@ -19,7 +19,7 @@ class MovieDetailsPage extends State<MovieDetails>{
       appBar: AppBar(
         centerTitle: true,
         backgroundColor: Color(0xFF1D1D1D),
-        title: Text("demo"),
+        // title: Text("demo"),
         leading: Row(
           children: [
 
@@ -87,7 +87,16 @@ class MovieDetailsPage extends State<MovieDetails>{
             onPressed: (){},
             icon: Icon(Icons.search),
             color: Colors.white,
-          )
+            iconSize: 20,
+          ),
+
+          IconButton(
+            onPressed: (){},
+            icon: Icon(Icons.shopping_cart),
+            color: Colors.white,
+            iconSize: 20,
+          ),
+
         ],
 
       ),
@@ -218,17 +227,23 @@ class MovieDetailsPage extends State<MovieDetails>{
                     mainAxisAlignment: MainAxisAlignment.start,
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      Align(
-                        alignment: Alignment.centerLeft,
-                        child: Text(
-                          "Moview Description",
-                          style: TextStyle(
-                            color: Colors.white,
-                            fontSize: 12,
-                            fontWeight: FontWeight.normal,
-                          ),
-                        ) ,
+
+                      Padding(
+                          padding: EdgeInsets.only(left: 5.0),
+                        child: Align(
+                          alignment: Alignment.centerLeft,
+                          child: Text(
+                            "Moview Description",
+                            style: TextStyle(
+                              color: Colors.white,
+                              fontSize: 12,
+                              fontWeight: FontWeight.normal,
+                            ),
+                          ) ,
+                        ),
+
                       ),
+
 
                       Padding(
                           padding: EdgeInsets.only(left: 5,right: 10,top: 5),
@@ -254,15 +269,16 @@ class MovieDetailsPage extends State<MovieDetails>{
               ),
 
             //   casting
-              Padding(
-                  padding: EdgeInsets.only(top: 10,left: 10),
-                child: Container(
+              Container(
+                  // padding: EdgeInsets.only(top: 10,left: 10),
+
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.start,
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
+
                       Padding(
-                          padding: EdgeInsets.only(left: 7),
+                          padding: EdgeInsets.only(left:20),
                         child: Text(
                           "Cast",
                           style: TextStyle(
@@ -272,59 +288,67 @@ class MovieDetailsPage extends State<MovieDetails>{
                         ),
                       ),
 
-                       Padding(
-                           padding: EdgeInsets.only(left: 2,right: 2),
-                         child: Container(
-                           width: 500,
-                           height: 50,
-                           child: Flexible(
-                             fit: FlexFit.loose,
-                             child: ListView(
-                               scrollDirection: Axis.horizontal,
-                               shrinkWrap: true,
-                               children: [
+                       Container(
+                         height: 50,
+                         width: 400,
+                         padding: EdgeInsets.only(left: 10),
+                         child: Row(
 
-                                 CircleAvatar(
-                                   maxRadius: 50,
-                                   backgroundColor: Color(0xFF312F2F),
+                             children: [
 
-                                 ),
+                               CircleAvatar(
+                                 maxRadius: 30,
+                                 backgroundColor: Color(0xFF312F2F),
 
-                                 CircleAvatar(
-                                   maxRadius: 50,
-                                   backgroundColor: Color(0xFF312F2F),
+                               ),
 
-                                 ),
+                               CircleAvatar(
+                                 maxRadius: 50,
+                                 backgroundColor: Color(0xFF312F2F),
 
-                                 CircleAvatar(
-                                   maxRadius: 50,
-                                   backgroundColor: Color(0xFF312F2F),
+                               ),
 
-                                 ),
+                               CircleAvatar(
+                                 maxRadius: 30,
+                                 backgroundColor: Color(0xFF312F2F),
 
-                                 CircleAvatar(
-                                   maxRadius: 50,
-                                   backgroundColor: Color(0xFF312F2F),
+                               ),
 
-                                 ),
+                               CircleAvatar(
+                                 maxRadius: 30,
+                                 backgroundColor: Color(0xFF312F2F),
 
-                               ],
+                               ),
+
+                               CircleAvatar(
+                                 maxRadius: 30,
+                                 backgroundColor: Color(0xFF312F2F),
+
+                               ),
+
+                             ]
+
+
+
+
+
 
                              ) ,
                            ),
-                         ),
-                       )
+
+
+
 
 
                     ],
                   ),
-                ),
+
 
               ),
 
             //   buy ticket
              Padding(
-                 padding: EdgeInsets.only(top: 30),
+                 padding: EdgeInsets.only(top: 50),
                child:  Align(
                  alignment: Alignment.center,
                  child: TextButton(

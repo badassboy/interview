@@ -9,9 +9,11 @@ import 'package:untitled/moviedetails.dart';
 import 'package:untitled/movies.dart';
 import 'package:untitled/myfiles.dart';
 import 'package:untitled/mystack.dart';
+import 'package:untitled/otp.dart';
 import 'package:untitled/register.dart';
 import 'package:untitled/schedule.dart';
 import 'package:untitled/showticket.dart';
+import 'package:untitled/ticket.dart';
 import 'package:untitled/vote.dart';
 
 import 'login.dart';
@@ -59,7 +61,7 @@ class _MyHomePageState extends State<MyHomePage> {
     Timer(
       Duration(seconds: 10),
         () => Navigator.pushReplacement(context,
-            MaterialPageRoute(builder: (context) => LoginScreen()))
+            MaterialPageRoute(builder: (context) => Ticket()))
 
     );
   }

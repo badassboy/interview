@@ -76,7 +76,7 @@ class OtpScreen extends State<Otp>{
                           //   form design Container
                           Container(
 
-                              height: 480,
+                              height: 490,
                               width: MediaQuery.of(context).size.width,
                               decoration: BoxDecoration(
                                 borderRadius: BorderRadius.circular(30.0),
@@ -99,7 +99,7 @@ class OtpScreen extends State<Otp>{
                                                 "Enter 4 pin code sent to your email",
                                                 style: TextStyle(
                                                     color: Colors.redAccent,
-                                                    fontWeight: FontWeight.w400
+                                                    fontWeight: FontWeight.bold
                                                 ),
                                               ),
                                             ),
@@ -177,7 +177,7 @@ class OtpScreen extends State<Otp>{
                                     Padding(
                                         padding: EdgeInsets.only(top: 10,bottom: 10,left: 20,right: 20),
                                         child: SizedBox(
-                                          width: 270,
+                                          width: 230,
                                           height: 50,
                                           child: ElevatedButton(
                                             child: Text(

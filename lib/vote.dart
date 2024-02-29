@@ -72,6 +72,19 @@ class VotePage extends State<Vote>{
 
               ),
 
+            Flexible(
+                child:
+
+              IconButton(
+                onPressed: (){},
+                icon: Icon(Icons.home),
+                color: Colors.white,
+                iconSize: 17,
+              )
+            )
+
+
+
 
 
 
@@ -105,6 +118,7 @@ class VotePage extends State<Vote>{
                           icon: Icon(
                             Icons.arrow_back_ios,
                             color: Colors.white,
+                            size: 13,
                           )
                       ),
                       // SizedBox(width: 3,),
@@ -124,15 +138,15 @@ class VotePage extends State<Vote>{
                 ),
 
                 Padding(
-                    padding: EdgeInsets.all(15),
+                    padding: EdgeInsets.only(left: 37, right: 2),
                   child: Text(
                     "Lorem Ipsum is simply dummy text of the printing and typesetting industry. "
                         "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, "
-                        "when an unknown printer took a galley",
+                       ,
 
                     style: TextStyle(
                       color: Colors.white,
-                      fontSize: 11
+                      fontSize: 10
                     ),
                   ),
                 ),
@@ -146,7 +160,7 @@ class VotePage extends State<Vote>{
                         height: 2,
                         thickness: 2,
                         indent: 0,
-                        endIndent: 70,
+                        endIndent: 50,
                         color: Color(0xFFCD0808),
                       ),
                       itemBuilder: (BuildContext context, int index){
@@ -154,17 +168,24 @@ class VotePage extends State<Vote>{
                           padding: EdgeInsets.only(left: 10, bottom: 15),
                           child: Row(
                             children: [
-                              Container(
-                                width: 70,
-                                height: 70,
-                                decoration: BoxDecoration(
-                                  image: DecorationImage(
-                                    image: AssetImage("lib/assets/images/owner.png"),
-                                    fit: BoxFit.cover
-                                  )
 
+                              Padding(
+                                  padding: EdgeInsets.only(left: 11),
+                                child:  Container(
+                                  width: 70,
+                                  height: 70,
+
+                                  decoration: BoxDecoration(
+                                      image: DecorationImage(
+                                          image: AssetImage("lib/assets/images/owner.png"),
+                                          fit: BoxFit.cover
+                                      )
+
+                                  ),
                                 ),
                               ),
+
+
                               SizedBox(width: 12,),
 
                               Container(

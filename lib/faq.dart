@@ -105,7 +105,7 @@ class FaqPage extends State<Faq> {
 
              // header details
              Padding(
-                 padding: EdgeInsets.only(left: 10),
+                 padding: EdgeInsets.only(),
                child: Row(
                  children: [
                    IconButton(

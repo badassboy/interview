@@ -11,7 +11,7 @@ class PasswordReset extends StatefulWidget{
 }
 
 class PasswordResetScreen extends State<PasswordReset> {
-
+  bool _obscured = false;
   final _formKey = GlobalKey<FormState>();
 
   @override
@@ -118,8 +118,18 @@ class PasswordResetScreen extends State<PasswordReset> {
                                             labelText: "Confirm password",
                                             labelStyle: TextStyle(
                                                 color: Colors.white
-                                            )
+                                            ),
+                                              suffixIcon: Padding(
+                                                padding: const EdgeInsets.fromLTRB(0, 0, 4, 0),
+                                                child: Icon(
+                                                  _obscured
+                                                      ? Icons.visibility_rounded
+                                                      : Icons.visibility_off_rounded,
+                                                  size: 20,
+                                                ),
+                                              )
                                         ),
+
 
                                       ) ,
 

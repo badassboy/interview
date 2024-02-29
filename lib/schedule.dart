@@ -146,7 +146,7 @@ class SchedulePage extends State<Schedule> {
                         Icon(
                           Icons.event_note,
                           color: Colors.white,
-                          size: 13,
+                          size: 17,
                         ),
 
                         SizedBox(width: 5,),
@@ -172,8 +172,9 @@ class SchedulePage extends State<Schedule> {
 
               // display horizontal scroll for days
               Container(
-                width: 500,
-                height: 40,
+                width: 350,
+                height: 30,
+                padding: EdgeInsets.only(left:8),
 
                 child: Flexible(
                   fit: FlexFit.loose,
