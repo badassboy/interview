@@ -7,7 +7,7 @@ enum Menu { itemOne, itemTwo, itemThree}
 class Ticket extends StatefulWidget{
   @override
   State<Ticket> createState() {
-   return TicketPage();
+    return TicketPage();
   }
 
 }
@@ -97,729 +97,498 @@ class TicketPage extends State<Ticket> {
           color: Color(0xFF1D1D1D),
           height: 1000,
           child: Column(
-          mainAxisSize: MainAxisSize.min,
+            mainAxisSize: MainAxisSize.min,
 
-          children: [
-            // horizontal scrollview of the type of movie
-            Container(
-              width: 400,
-              height: 30,
+            children: [
+              // horizontal scrollview of the type of movie
+              Container(
+                width: 400,
+                height: 30,
 
-              child: Flexible(
-                fit: FlexFit.loose,
-                child: ListView(
-                  scrollDirection: Axis.horizontal,
-                  shrinkWrap: true,
-                  children: [
-                    
-                    ElevatedButton(
+                child: Flexible(
+                  fit: FlexFit.loose,
+                  child: ListView(
+                    scrollDirection: Axis.horizontal,
+                    shrinkWrap: true,
+                    children: [
+
+                      ElevatedButton(
                         onPressed: (){},
                         child: Text(
-                            "Comedy",
+                          "Comedy",
                           style: TextStyle(
-                            color: Colors.white
+                              color: Colors.white
                           ),
                         ),
                         style: ElevatedButton.styleFrom(
-                          backgroundColor: Color(0xFF313131)
+                            backgroundColor: Color(0xFF313131)
                         ),
-                    ),
-                    
-                    SizedBox(width: 7,),
-                    ElevatedButton(
+                      ),
+
+                      SizedBox(width: 7,),
+                      ElevatedButton(
                         onPressed: (){},
                         child: Text("Drame",
-                        style: TextStyle(
-                          color: Colors.white
+                          style: TextStyle(
+                              color: Colors.white
+                          ),
                         ),
+                        style: ElevatedButton.styleFrom(
+                            backgroundColor: Color(0xFF313131)
                         ),
-                      style: ElevatedButton.styleFrom(
-                          backgroundColor: Color(0xFF313131)
                       ),
-                    ),
-                    ElevatedButton(
+                      ElevatedButton(
                         onPressed: (){},
                         child: Text("Action"),
-                      style: ElevatedButton.styleFrom(
-                          backgroundColor: Color(0xFF313131)
+                        style: ElevatedButton.styleFrom(
+                            backgroundColor: Color(0xFF313131)
+                        ),
                       ),
-                    ),
-                    ElevatedButton(
+                      ElevatedButton(
                         onPressed: (){},
                         child: Text("Action"),
-                      style: ElevatedButton.styleFrom(
-                          backgroundColor: Color(0xFF313131)
+                        style: ElevatedButton.styleFrom(
+                            backgroundColor: Color(0xFF313131)
+                        ),
                       ),
-                    ),
 
-                    ElevatedButton(
-                        onPressed: (){},
-                        child: Text("Action")
-                    ),
-                    SizedBox(width: 7,),
+                      ElevatedButton(
+                          onPressed: (){},
+                          child: Text("Action")
+                      ),
+                      SizedBox(width: 7,),
 
-                    ElevatedButton(
-                        onPressed: (){},
-                        child: Text("Action")
-                    ),
-                  ],
+                      ElevatedButton(
+                          onPressed: (){},
+                          child: Text("Action")
+                      ),
+                    ],
 
-                ) ,
+                  ) ,
+                ),
               ),
-            ),
 
 
 
 
 
-            // horizontal scrollable
+              // horizontal scrollable
 
-            // SizedBox(height: 10,),
+              // SizedBox(height: 10,),
 
-            // display movies
-            SizedBox(
+              // display movies
+              SingleChildScrollView(
 
-              child:  GridView.count(
-                primary: false,
-                padding: const EdgeInsets.all(20),
-                crossAxisSpacing: 10,
-                mainAxisSpacing: 10,
-                crossAxisCount: 3,
-                children: <Widget>[
+                child:  GridView.count(
+                  shrinkWrap: true,
+                  primary: false,
+                  padding: const EdgeInsets.all(20),
+                  crossAxisSpacing: 10,
+                  mainAxisSpacing: 10,
+                  crossAxisCount: 3,
+                  children: <Widget>[
 
+                    Column(
+                      children: [
+                        Expanded(
 
-
-                  Container(
-
-                height: 800,
-                width: 800,
-                // color: Colors.yellow,
-
-                child: Padding(
-                  padding: EdgeInsets.only(),
-                  child:  Column(
-                    children: [
-
-                     Flexible(
-                         child:
-                         Container(
-
-                           decoration: BoxDecoration(
-                               image: DecorationImage(
-                                   image: AssetImage("lib/assets/images/owner.png"),
-                                   fit: BoxFit.fill,
+                              child: Container(
+                                height: 250.0,
+                                decoration: BoxDecoration(
+                                    image: DecorationImage(
+                                      image: AssetImage("lib/assets/images/owner.png"),
+                                      fit: BoxFit.fill,
 
 
-                               )
-                           ),
+                                    )
+                                ),
+                              ),
 
-                         ),
-                     ),
+
+                        ),
+
+                              Text(
+                                "Calamity Jane",
+                                style: TextStyle(
+                                  color: Colors.white,
+                                  fontSize: 11,
+                                ),),
 
 
 
+                        Padding(
+                      padding: EdgeInsets.only(left: 10),
+                      child:  Row(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        mainAxisAlignment: MainAxisAlignment.start,
 
+                        children: [
+                          Text(
+                            "2024",
+                            style: TextStyle(
+                                color: Colors.white,
+                                fontSize: 10
+                            ),
+                          ),
+                          SizedBox(width: 5,),
+
+                          Icon(
+                            Icons.schedule,
+                            size: 13,
+                            color: Colors.white,
+                          ),
 
                           Text(
-                            "Calamity Jane",
+                            "1:10",
                             style: TextStyle(
-                              color: Colors.white,
-                              fontSize: 11,
-                            ),),
+                                color: Colors.white,
+                                fontSize: 10
+                            ),
+                          ),
 
-                          Padding(
-                            padding: EdgeInsets.only(left: 10),
-                            child:  Row(
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              mainAxisAlignment: MainAxisAlignment.start,
 
-                              children: [
-                                Text(
-                                  "2024",
-                                  style: TextStyle(
-                                      color: Colors.white,
-                                      fontSize: 10
-                                  ),
+                        ],
+                      ) ,
+                    )
+                      ],
+                ),
+                    Column(
+                      children: [
+                        Expanded(
+
+                              child: Container(
+                                height: 250.0,
+                                decoration: BoxDecoration(
+                                    image: DecorationImage(
+                                      image: AssetImage("lib/assets/images/owner.png"),
+                                      fit: BoxFit.fill,
+
+
+                                    )
                                 ),
-                                SizedBox(width: 5,),
+                              ),
 
-                                Icon(
-                                  Icons.schedule,
-                                  size: 13,
+
+                        ),
+
+                              Text(
+                                "Calamity Jane",
+                                style: TextStyle(
                                   color: Colors.white,
+                                  fontSize: 11,
+                                ),),
+
+
+
+                        Padding(
+                      padding: EdgeInsets.only(left: 10),
+                      child:  Row(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        mainAxisAlignment: MainAxisAlignment.start,
+
+                        children: [
+                          Text(
+                            "2024",
+                            style: TextStyle(
+                                color: Colors.white,
+                                fontSize: 10
+                            ),
+                          ),
+                          SizedBox(width: 5,),
+
+                          Icon(
+                            Icons.schedule,
+                            size: 13,
+                            color: Colors.white,
+                          ),
+
+                          Text(
+                            "1:10",
+                            style: TextStyle(
+                                color: Colors.white,
+                                fontSize: 10
+                            ),
+                          ),
+
+
+                        ],
+                      ) ,
+                    )
+                      ],
+                ),
+                    Column(
+                      children: [
+                        Expanded(
+
+                              child: Container(
+                                height: 250.0,
+                                decoration: BoxDecoration(
+                                    image: DecorationImage(
+                                      image: AssetImage("lib/assets/images/owner.png"),
+                                      fit: BoxFit.fill,
+
+
+                                    )
                                 ),
+                              ),
 
-                                Text(
-                                  "1:10",
-                                  style: TextStyle(
-                                      color: Colors.white,
-                                      fontSize: 10
-                                  ),
+
+                        ),
+
+                              Text(
+                                "Calamity Jane",
+                                style: TextStyle(
+                                  color: Colors.white,
+                                  fontSize: 11,
+                                ),),
+
+
+
+                        Padding(
+                      padding: EdgeInsets.only(left: 10),
+                      child:  Row(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        mainAxisAlignment: MainAxisAlignment.start,
+
+                        children: [
+                          Text(
+                            "2024",
+                            style: TextStyle(
+                                color: Colors.white,
+                                fontSize: 10
+                            ),
+                          ),
+                          SizedBox(width: 5,),
+
+                          Icon(
+                            Icons.schedule,
+                            size: 13,
+                            color: Colors.white,
+                          ),
+
+                          Text(
+                            "1:10",
+                            style: TextStyle(
+                                color: Colors.white,
+                                fontSize: 10
+                            ),
+                          ),
+
+
+                        ],
+                      ) ,
+                    )
+                      ],
+                ),
+                    Column(
+                      children: [
+                        Expanded(
+
+                              child: Container(
+                                height: 250.0,
+                                decoration: BoxDecoration(
+                                    image: DecorationImage(
+                                      image: AssetImage("lib/assets/images/owner.png"),
+                                      fit: BoxFit.fill,
+
+
+                                    )
                                 ),
+                              ),
 
 
-                              ],
-                            ) ,
-                          )
+                        ),
+
+                              Text(
+                                "Calamity Jane",
+                                style: TextStyle(
+                                  color: Colors.white,
+                                  fontSize: 11,
+                                ),),
 
 
 
+                        Padding(
+                      padding: EdgeInsets.only(left: 10),
+                      child:  Row(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        mainAxisAlignment: MainAxisAlignment.start,
+
+                        children: [
+                          Text(
+                            "2024",
+                            style: TextStyle(
+                                color: Colors.white,
+                                fontSize: 10
+                            ),
+                          ),
+                          SizedBox(width: 5,),
+
+                          Icon(
+                            Icons.schedule,
+                            size: 13,
+                            color: Colors.white,
+                          ),
+
+                          Text(
+                            "1:10",
+                            style: TextStyle(
+                                color: Colors.white,
+                                fontSize: 10
+                            ),
+                          ),
+
+
+                        ],
+                      ) ,
+                    )
+                      ],
+                ),
+                    Column(
+                      children: [
+                        Expanded(
+
+                              child: Container(
+                                height: 250.0,
+                                decoration: BoxDecoration(
+                                    image: DecorationImage(
+                                      image: AssetImage("lib/assets/images/owner.png"),
+                                      fit: BoxFit.fill,
+
+
+                                    )
+                                ),
+                              ),
+
+
+                        ),
+
+                              Text(
+                                "Calamity Jane",
+                                style: TextStyle(
+                                  color: Colors.white,
+                                  fontSize: 11,
+                                ),),
 
 
 
+                        Padding(
+                      padding: EdgeInsets.only(left: 10),
+                      child:  Row(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        mainAxisAlignment: MainAxisAlignment.start,
 
-                    ],
-                  ),
+                        children: [
+                          Text(
+                            "2024",
+                            style: TextStyle(
+                                color: Colors.white,
+                                fontSize: 10
+                            ),
+                          ),
+                          SizedBox(width: 5,),
 
+                          Icon(
+                            Icons.schedule,
+                            size: 13,
+                            color: Colors.white,
+                          ),
+
+                          Text(
+                            "1:10",
+                            style: TextStyle(
+                                color: Colors.white,
+                                fontSize: 10
+                            ),
+                          ),
+
+
+                        ],
+                      ) ,
+                    )
+                      ],
+                ),
+                    Column(
+                      children: [
+                        Expanded(
+
+                              child: Container(
+                                height: 250.0,
+                                decoration: BoxDecoration(
+                                    image: DecorationImage(
+                                      image: AssetImage("lib/assets/images/owner.png"),
+                                      fit: BoxFit.fill,
+
+
+                                    )
+                                ),
+                              ),
+
+
+                        ),
+
+                              Text(
+                                "Calamity Jane",
+                                style: TextStyle(
+                                  color: Colors.white,
+                                  fontSize: 11,
+                                ),),
+
+
+
+                        Padding(
+                      padding: EdgeInsets.only(left: 10),
+                      child:  Row(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        mainAxisAlignment: MainAxisAlignment.start,
+
+                        children: [
+                          Text(
+                            "2024",
+                            style: TextStyle(
+                                color: Colors.white,
+                                fontSize: 10
+                            ),
+                          ),
+                          SizedBox(width: 5,),
+
+                          Icon(
+                            Icons.schedule,
+                            size: 13,
+                            color: Colors.white,
+                          ),
+
+                          Text(
+                            "1:10",
+                            style: TextStyle(
+                                color: Colors.white,
+                                fontSize: 10
+                            ),
+                          ),
+
+
+                        ],
+                      ) ,
+                    )
+                      ],
                 ),
 
-                   ),
 
-                  Container(
-
-                    height: 800,
-                    width: 800,
-                    // color: Colors.yellow,
-
-                    child: Padding(
-                      padding: EdgeInsets.only(),
-                      child:  Column(
-                        children: [
-
-                          Flexible(
-                            child:
-                            Container(
-
-                              decoration: BoxDecoration(
-                                  image: DecorationImage(
-                                    image: AssetImage("lib/assets/images/owner.png"),
-                                    fit: BoxFit.fill,
-
-
-                                  )
-                              ),
-
-                            ),
-                          ),
-
-
-
-
-
-                          Text(
-                            "Calamity Jane",
-                            style: TextStyle(
-                              color: Colors.white,
-                              fontSize: 11,
-                            ),),
-
-                          Padding(
-                            padding: EdgeInsets.only(left: 10),
-                            child:  Row(
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              mainAxisAlignment: MainAxisAlignment.start,
-
-                              children: [
-                                Text(
-                                  "2024",
-                                  style: TextStyle(
-                                      color: Colors.white,
-                                      fontSize: 10
-                                  ),
-                                ),
-                                SizedBox(width: 5,),
-
-                                Icon(
-                                  Icons.schedule,
-                                  size: 13,
-                                  color: Colors.white,
-                                ),
-
-                                Text(
-                                  "1:10",
-                                  style: TextStyle(
-                                      color: Colors.white,
-                                      fontSize: 10
-                                  ),
-                                ),
-
-
-                              ],
-                            ) ,
-                          )
-
-
-
-
-
-
-
-                        ],
-                      ),
-
-                    ),
-
-                  ),
-                  Container(
-
-                    height: 800,
-                    width: 800,
-                    // color: Colors.yellow,
-
-                    child: Padding(
-                      padding: EdgeInsets.only(),
-                      child:  Column(
-                        children: [
-
-                          Flexible(
-                            child:
-                            Container(
-
-                              decoration: BoxDecoration(
-                                  image: DecorationImage(
-                                    image: AssetImage("lib/assets/images/owner.png"),
-                                    fit: BoxFit.fill,
-
-
-                                  )
-                              ),
-
-                            ),
-                          ),
-
-
-
-
-
-                          Text(
-                            "Calamity Jane",
-                            style: TextStyle(
-                              color: Colors.white,
-                              fontSize: 11,
-                            ),),
-
-                          Padding(
-                            padding: EdgeInsets.only(left: 10),
-                            child:  Row(
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              mainAxisAlignment: MainAxisAlignment.start,
-
-                              children: [
-                                Text(
-                                  "2024",
-                                  style: TextStyle(
-                                      color: Colors.white,
-                                      fontSize: 10
-                                  ),
-                                ),
-                                SizedBox(width: 5,),
-
-                                Icon(
-                                  Icons.schedule,
-                                  size: 13,
-                                  color: Colors.white,
-                                ),
-
-                                Text(
-                                  "1:10",
-                                  style: TextStyle(
-                                      color: Colors.white,
-                                      fontSize: 10
-                                  ),
-                                ),
-
-
-                              ],
-                            ) ,
-                          )
-
-
-
-
-
-
-
-                        ],
-                      ),
-
-                    ),
-
-                  ),
-                  Container(
-
-                    height: 800,
-                    width: 800,
-                    // color: Colors.yellow,
-
-                    child: Padding(
-                      padding: EdgeInsets.only(),
-                      child:  Column(
-                        children: [
-
-                          Flexible(
-                            child:
-                            Container(
-
-                              decoration: BoxDecoration(
-                                  image: DecorationImage(
-                                    image: AssetImage("lib/assets/images/owner.png"),
-                                    fit: BoxFit.fill,
-
-
-                                  )
-                              ),
-
-                            ),
-                          ),
-
-
-
-
-
-                          Text(
-                            "Calamity Jane",
-                            style: TextStyle(
-                              color: Colors.white,
-                              fontSize: 11,
-                            ),),
-
-                          Padding(
-                            padding: EdgeInsets.only(left: 10),
-                            child:  Row(
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              mainAxisAlignment: MainAxisAlignment.start,
-
-                              children: [
-                                Text(
-                                  "2024",
-                                  style: TextStyle(
-                                      color: Colors.white,
-                                      fontSize: 10
-                                  ),
-                                ),
-                                SizedBox(width: 5,),
-
-                                Icon(
-                                  Icons.schedule,
-                                  size: 13,
-                                  color: Colors.white,
-                                ),
-
-                                Text(
-                                  "1:10",
-                                  style: TextStyle(
-                                      color: Colors.white,
-                                      fontSize: 10
-                                  ),
-                                ),
-
-
-                              ],
-                            ) ,
-                          )
-
-
-
-
-
-
-
-                        ],
-                      ),
-
-                    ),
-
-                  ),
-                  Container(
-
-                    height: 800,
-                    width: 800,
-                    // color: Colors.yellow,
-
-                    child: Padding(
-                      padding: EdgeInsets.only(),
-                      child:  Column(
-                        children: [
-
-                          Flexible(
-                            child:
-                            Container(
-
-                              decoration: BoxDecoration(
-                                  image: DecorationImage(
-                                    image: AssetImage("lib/assets/images/owner.png"),
-                                    fit: BoxFit.fill,
-
-
-                                  )
-                              ),
-
-                            ),
-                          ),
-
-
-
-
-
-                          Text(
-                            "Calamity Jane",
-                            style: TextStyle(
-                              color: Colors.white,
-                              fontSize: 11,
-                            ),),
-
-                          Padding(
-                            padding: EdgeInsets.only(left: 10),
-                            child:  Row(
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              mainAxisAlignment: MainAxisAlignment.start,
-
-                              children: [
-                                Text(
-                                  "2024",
-                                  style: TextStyle(
-                                      color: Colors.white,
-                                      fontSize: 10
-                                  ),
-                                ),
-                                SizedBox(width: 5,),
-
-                                Icon(
-                                  Icons.schedule,
-                                  size: 13,
-                                  color: Colors.white,
-                                ),
-
-                                Text(
-                                  "1:10",
-                                  style: TextStyle(
-                                      color: Colors.white,
-                                      fontSize: 10
-                                  ),
-                                ),
-
-
-                              ],
-                            ) ,
-                          )
-
-
-
-
-
-
-
-                        ],
-                      ),
-
-                    ),
-
-                  ),
-                  Container(
-
-                    height: 800,
-                    width: 800,
-                    // color: Colors.yellow,
-
-                    child: Padding(
-                      padding: EdgeInsets.only(),
-                      child:  Column(
-                        children: [
-
-                          Flexible(
-                            child:
-                            Container(
-
-                              decoration: BoxDecoration(
-                                  image: DecorationImage(
-                                    image: AssetImage("lib/assets/images/owner.png"),
-                                    fit: BoxFit.fill,
-
-
-                                  )
-                              ),
-
-                            ),
-                          ),
-
-
-
-
-
-                          Text(
-                            "Calamity Jane",
-                            style: TextStyle(
-                              color: Colors.white,
-                              fontSize: 11,
-                            ),),
-
-                          Padding(
-                            padding: EdgeInsets.only(left: 10),
-                            child:  Row(
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              mainAxisAlignment: MainAxisAlignment.start,
-
-                              children: [
-                                Text(
-                                  "2024",
-                                  style: TextStyle(
-                                      color: Colors.white,
-                                      fontSize: 10
-                                  ),
-                                ),
-                                SizedBox(width: 5,),
-
-                                Icon(
-                                  Icons.schedule,
-                                  size: 13,
-                                  color: Colors.white,
-                                ),
-
-                                Text(
-                                  "1:10",
-                                  style: TextStyle(
-                                      color: Colors.white,
-                                      fontSize: 10
-                                  ),
-                                ),
-
-
-                              ],
-                            ) ,
-                          )
-
-
-
-
-
-
-
-                        ],
-                      ),
-
-                    ),
-
-                  ),
-                  Container(
-
-                    height: 800,
-                    width: 800,
-                    // color: Colors.yellow,
-
-                    child: Padding(
-                      padding: EdgeInsets.only(),
-                      child:  Column(
-                        children: [
-
-                          Flexible(
-                            child:
-                            Container(
-
-                              decoration: BoxDecoration(
-                                  image: DecorationImage(
-                                    image: AssetImage("lib/assets/images/owner.png"),
-                                    fit: BoxFit.fill,
-
-
-                                  )
-                              ),
-
-                            ),
-                          ),
-
-
-
-
-
-                          Text(
-                            "Calamity Jane",
-                            style: TextStyle(
-                              color: Colors.white,
-                              fontSize: 11,
-                            ),),
-
-                          Padding(
-                            padding: EdgeInsets.only(left: 10),
-                            child:  Row(
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              mainAxisAlignment: MainAxisAlignment.start,
-
-                              children: [
-                                Text(
-                                  "2024",
-                                  style: TextStyle(
-                                      color: Colors.white,
-                                      fontSize: 10
-                                  ),
-                                ),
-                                SizedBox(width: 5,),
-
-                                Icon(
-                                  Icons.schedule,
-                                  size: 13,
-                                  color: Colors.white,
-                                ),
-
-                                Text(
-                                  "1:10",
-                                  style: TextStyle(
-                                      color: Colors.white,
-                                      fontSize: 10
-                                  ),
-                                ),
-
-
-                              ],
-                            ) ,
-                          )
-
-
-
-
-
-
-
-                        ],
-                      ),
-
-                    ),
-
-                  ),
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-                ],
+              ]
+                        )
               ),
-            )
-          ],
-        ),
-        ),
+                    ]
 
-
-
-
+          ),
+              )
       ),
-    );
+          );
+
+
+
+
+
+
   }
 
 }
